@@ -1,4 +1,4 @@
-package com.elyeproj.team_b
+package com.elyeproj.team_a
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -13,26 +13,23 @@ import androidx.compose.ui.unit.dp
 import com.elyeproj.design_kit.ListPlugItem
 import com.elyeproj.design_kit.socketListView
 
-
-fun registerTeamB() {
-    val a = @Composable { data: String -> TeamBView(data = data) }
-    socketListView.register("TeamBPlug", a)
+fun registerTeamA() {
+    val a = @Composable { data: String -> TeamAView(data = data) }
+    socketListView.register("TeamAPlug", a)
 }
 
 @Composable
-fun TeamBView(data: String) {
+fun TeamAView(data: String) {
     ListPlugItem {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(16.dp)
-                .background(Color(0xFF7DCEA0))
+                .background(Color(0xFFADCE70))
         ) {
-            Text("Team B Here")
-            Text("Here to show: $data Data")
-            Text("=========================")
+            Text("Team A Here")
+            Text("From OutSide: $data Data")
         }
     }
 }
-

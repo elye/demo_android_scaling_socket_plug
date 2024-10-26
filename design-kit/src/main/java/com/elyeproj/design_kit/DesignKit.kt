@@ -15,9 +15,19 @@ class DesignKit {
 
 val socketListView = SocketListView()
 
+
+
 class SocketListView {
+
+
+    lateinit var a: @Composable (String) -> Unit
+
     fun getItemFirst(data: String):  @Composable LazyItemScope.() -> Unit = {
-        MyItem { Text(text = "data") }
+        a.invoke(data)
+    }
+
+    fun register(function: @Composable (String) -> Unit) {
+        a = function
     }
 }
 
@@ -25,16 +35,8 @@ class SocketListView {
 fun SocketList(innerPadding: PaddingValues) {
     LazyColumn(Modifier.padding(innerPadding)) {
         item {
-            socketListView.getItemFirst(data = "").invoke(this)
+            socketListView.getItemFirst(data = "From SocketList").invoke(this)
         }
-    }
-}
-
-@Composable
-private fun MyItem(content: @Composable () -> Unit = {}) {
-    Column(modifier = androidx.compose.ui.Modifier.padding(16.dp), ) {
-        Text("I am here")
-        content.invoke()
     }
 }
 

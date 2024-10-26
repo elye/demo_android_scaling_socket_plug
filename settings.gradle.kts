@@ -23,3 +23,4 @@ rootProject.name = "Socket And Plug"
 include(":app")
 include(":design-kit")
 include(":team-a")
+include(":team-b")

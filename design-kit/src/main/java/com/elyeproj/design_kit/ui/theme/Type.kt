@@ -1,4 +1,4 @@
-package com.elyeproj.team_a.ui.theme
+package com.elyeproj.design_kit.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

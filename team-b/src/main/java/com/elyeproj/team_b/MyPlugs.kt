@@ -18,17 +18,20 @@ import com.elyeproj.design_kit.teamViewRegistration
 
 
 fun registerTeamB() {
-    val listItemFunction = @Composable { data: String -> TeamBListItemPlugView(data = data) }
+    val listItemFunction1 = @Composable { data: String -> TeamBListItemPlugView1(data = data) }
+    val listItemFunction2 = @Composable { data: String -> TeamBListItemPlugView2(data = data) }
     val tabScreenFunction = @Composable { data: String -> TeamBTabScreenPlugView(data = data) }
-    teamViewRegistration.registerListItemPlugViews("TeamBPlug", listItemFunction)
+    teamViewRegistration.registerListItemPlugViews("TeamBPlug1", listItemFunction1)
+    teamViewRegistration.registerListItemPlugViews("TeamBPlug2", listItemFunction2)
+
     teamViewRegistration.registerTabScreenPlugViews(
-        "TeamBPlug",
+        "TeamBPlug1",
         Pair("Team B Tab", tabScreenFunction)
     )
 }
 
 @Composable
-fun TeamBListItemPlugView(data: String) {
+fun TeamBListItemPlugView1(data: String) {
     ListItemPlug {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -43,6 +46,23 @@ fun TeamBListItemPlugView(data: String) {
         }
     }
 }
+
+@Composable
+fun TeamBListItemPlugView2(data: String) {
+    ListItemPlug {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp)
+                .background(Color(0xFF8D3EF0))
+        ) {
+            Text("Team B List Item Here")
+            Text("****** $data Data ******")
+        }
+    }
+}
+
 
 @Composable
 fun TeamBTabScreenPlugView(data: String) {

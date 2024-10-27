@@ -3,7 +3,7 @@
 
     <application>
         <activity
-            android:name=".ATeamActivity"
+            android:name=".ATeamTabActivity"
             android:exported="false" />
     </application>
 

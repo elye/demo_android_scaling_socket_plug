@@ -1,4 +1,4 @@
-package com.elyeproj.socketandplug.ui.theme
+package com.elyeproj.design_kit.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

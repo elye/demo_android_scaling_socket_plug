@@ -50,6 +50,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":design-kit"))
     implementation(project(":team-a"))
     implementation(project(":team-b"))
     implementation(libs.androidx.core.ktx)

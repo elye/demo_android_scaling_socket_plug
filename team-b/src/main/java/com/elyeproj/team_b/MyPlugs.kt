@@ -20,13 +20,20 @@ import com.elyeproj.design_kit.teamViewRegistration
 fun registerTeamB() {
     val listItemFunction1 = @Composable { data: String -> TeamBListItemPlugView1(data = data) }
     val listItemFunction2 = @Composable { data: String -> TeamBListItemPlugView2(data = data) }
-    val tabScreenFunction = @Composable { data: String -> TeamBTabScreenPlugView(data = data) }
+    val tabScreenFunction1 = @Composable { data: String -> TeamBTabScreenPlugView1(data = data) }
+    val tabScreenFunction2 = @Composable { data: String -> TeamBTabScreenPlugView2(data = data) }
+
     teamViewRegistration.registerListItemPlugViews("TeamBPlug1", listItemFunction1)
     teamViewRegistration.registerListItemPlugViews("TeamBPlug2", listItemFunction2)
 
     teamViewRegistration.registerTabScreenPlugViews(
         "TeamBPlug1",
-        Pair("Team B Tab", tabScreenFunction)
+        Pair("Team B Tab1", tabScreenFunction1)
+    )
+
+    teamViewRegistration.registerTabScreenPlugViews(
+        "TeamBPlug2",
+        Pair("Team B Tab2", tabScreenFunction2)
     )
 }
 
@@ -65,7 +72,7 @@ fun TeamBListItemPlugView2(data: String) {
 
 
 @Composable
-fun TeamBTabScreenPlugView(data: String) {
+fun TeamBTabScreenPlugView1(data: String) {
     TabScreenPlug {
         Box(
             modifier = Modifier
@@ -83,6 +90,33 @@ fun TeamBTabScreenPlugView(data: String) {
             ) {
                 Text("Team B Tab Screen Here")
                 Text("From OutSide: $data Data")
+            }
+        }
+    }
+}
+
+
+@Composable
+fun TeamBTabScreenPlugView2(data: String) {
+    TabScreenPlug {
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(16.dp)
+                .background(Color(0xFF7DCEA0)),
+            contentAlignment = Alignment.Center
+        ) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp)
+                    .background(Color(0xFF7DCEA0))
+            ) {
+                Text("Team B Tab 2 Screen Here")
+                Text("From OutSide: $data Data")
+
+                ListSocketCalling()
             }
         }
     }

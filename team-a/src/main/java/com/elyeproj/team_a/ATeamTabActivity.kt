@@ -33,19 +33,9 @@ class ATeamTabActivity : ComponentActivity() {
                             listOf(
                                 "TeamAPlug1" to "SocketList to A1",
                                 "TeamAPlug2" to "SocketList to A2",
-                                "TeamBPlug" to "SocketList to B",
+                                "TeamBPlug1" to "SocketList to B",
                                 "TeamCPlug" to "SocketList to C",
-                            )
-                        )
-
-                        Text("This is Team A Calling Socket!!")
-                        ListSocket(
-                            listOf(
-                                "TeamBPlug" to "SocketList to B",
-                                "TeamAPlug" to "SocketList to A",
-                                "TeamBPlug" to "Another one to B",
-                                "TeamCPlug" to "SocketList to C",
-                                "TeamAPlug" to "Another one to A",
+                                "TeamBPlug2" to "SocketList to B",
                             )
                         )
                     }

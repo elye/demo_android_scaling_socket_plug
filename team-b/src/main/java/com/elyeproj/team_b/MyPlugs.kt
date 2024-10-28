@@ -45,7 +45,7 @@ fun TeamBListItemPlugView1(data: String) {
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(16.dp)
-                .background(Color(0xFF7DCEA0))
+                .background(Color(0xFFFDFEA0))
         ) {
             Text("Team B List Item Here")
             Text("Here to show: $data Data")
@@ -78,7 +78,7 @@ fun TeamBTabScreenPlugView1(data: String) {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(16.dp)
-                .background(Color(0xFF7DCEA0)),
+                .background(Color(0xFFFDFEA0)),
             contentAlignment = Alignment.Center
         ) {
             Column(
@@ -86,7 +86,7 @@ fun TeamBTabScreenPlugView1(data: String) {
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(16.dp)
-                    .background(Color(0xFF7DCEA0))
+                    .background(Color(0xFFFDFEA0))
             ) {
                 Text("Team B Tab Screen Here")
                 Text("From OutSide: $data Data")

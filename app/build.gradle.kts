@@ -53,6 +53,7 @@ dependencies {
     implementation(project(":design-kit"))
     implementation(project(":team-a"))
     implementation(project(":team-b"))
+    implementation(project(":team-c"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

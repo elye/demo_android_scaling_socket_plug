@@ -36,6 +36,7 @@ class ATeamTabActivity : ComponentActivity() {
                                 "TeamBPlug1" to "SocketList to B",
                                 "TeamCPlug" to "SocketList to C",
                                 "TeamBPlug2" to "SocketList to B",
+                                "TeamDPlug" to "SocketList to D",
                             )
                         )
                     }

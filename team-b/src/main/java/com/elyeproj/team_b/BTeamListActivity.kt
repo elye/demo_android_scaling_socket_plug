@@ -41,10 +41,10 @@ fun ListSocketCalling() {
     Text("This is Team B Calling Socket!!")
     ListSocket(
         listOf(
-            "TeamBPlug1" to "SocketList to B",
             "TeamAPlug" to "SocketList to A",
-            "TeamBPlug2" to "Another one to B",
+            "TeamBPlug1" to "Another one to B",
             "TeamCPlug" to "SocketList to C",
+            "TeamDPlug" to "Another one to D",
             "TeamAPlug" to "Another one to A",
             "TeamBPlug2" to "SocketList to B",
             "TeamBPlug1" to "Another one to B",
